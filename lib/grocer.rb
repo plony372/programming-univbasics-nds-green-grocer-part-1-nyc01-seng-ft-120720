@@ -20,5 +20,4 @@ def consolidate_cart(cart)
   h = Hash.new 0;
   cart.each {|p| h[p] += 1};
   product_list_result = h.keys.map{|k| k["count"] = h[k]; k};
-  product_list_result
 end
