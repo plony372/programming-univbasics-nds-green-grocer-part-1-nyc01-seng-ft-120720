@@ -5,7 +5,7 @@ count = 0
     #  p person
     person.each do |k,v|
         if v == name
-            return shelf[count]
+            return collection[count]
         end
     end
     count += 1
