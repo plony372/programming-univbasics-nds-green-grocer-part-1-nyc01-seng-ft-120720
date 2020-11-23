@@ -17,8 +17,8 @@ count = 0
 
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  h = Hash.new 0;
+  unconsolidated_cart.each {|p| h[p] += 1};
+  product_list_result = h.keys.map{|k| k["count"] = h[k]; k};
+  product_list_result
 end
